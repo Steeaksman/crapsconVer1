@@ -7,7 +7,7 @@
    <div class="container is-max-desktop">
    <div class="navbar-brand">
    <a class="navbar-item" href="https://bulma.io">
-     <img src="src/assets/dcrap.jpg" width="60" height="128">
+     <img src="/src/assets/dcrap.jpg" width="60" height="128">
      Craps Connection
    </a>
 
