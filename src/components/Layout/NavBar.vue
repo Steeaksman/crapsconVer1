@@ -6,10 +6,9 @@
     >
    <div class="container is-max-desktop">
    <div class="navbar-brand">
-   <a class="navbar-item" href="https://bulma.io">
-     <img src="/src/assets/dcrap.jpg" width="60" height="128">
-     Craps Connection
-   </a>
+    <router-link to="/"><img src="src/assets/dcrap.jpg" width="60" height="150"/>
+    Craps stuff</router-link>
+   
 
    <a
    @click.prevent="showMobileNav = !showMobileNav"
@@ -41,7 +40,7 @@
    Search for Casinos
    </RouterLink>
 
-   <RouterLink to="/" class="navbar-item">  
+   <RouterLink to="/notes" class="navbar-item">  
    Trip Reports
    </RouterLink>
 
