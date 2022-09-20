@@ -3,14 +3,15 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ViewNotes from '../views/ViewNotes.vue'
 import ViewStats from '../views/ViewStats.vue'
 import tester from '../views/tester.vue'
+import opener from '../views/opener.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'notes',
-      component: ViewNotes
+      name: 'opener',
+      component: opener
     },
     {
       path: '/stats',
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/tester',
       name: 'tester',
       component: tester
+    },
+    {
+      path: '/notes',
+      name: 'notes',
+      component: ViewNotes
     }
     
   ]
