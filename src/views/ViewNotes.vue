@@ -1,17 +1,15 @@
 <template>
     <div class="notes">
     <div
-    v-for="i in 5"
+    v-for="note in notes"
+    :key="note.id"
     class="card mb-4"
     >
        
   
   <div class="card-content">
     <div class="content is-size-4">
-        Wind Creek Casino & Hotel
-Atmore, Alabama
-This is an Indian Casino with lots of craps tables.
-They also have a Marriage Chapel where you can marry your 1st cousin . . .this is Alabama you know!
+       {{note.content}} 
 
     </div>
   </div>
@@ -25,7 +23,21 @@ They also have a Marriage Chapel where you can marry your 1st cousin . . .this i
 </template>
 
 <script setup>
-
+ import {ref} from 'vue'
+ const notes = ref([
+  {
+    id: 'id1',
+    content: 'Wind Creek Casino & Hotel Atmore, Alabama'
+  },
+  {
+    id: 'id2',
+    content: 'They also have a Marriage Chapel where you can marry your 1st cousin'
+  },
+  {
+    id: 'id3',
+    content: 'This is an Indian Casino with lots of craps tables. Live enactment of Custers Last Stand.'
+  }
+ ])
 </script>
 
 <style lang="scss" scoped>

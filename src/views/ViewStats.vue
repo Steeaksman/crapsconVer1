@@ -1,11 +1,43 @@
 <template>
-    <div class="stats">
-<h1>Casino search and listing here</h1>
+    <div class="notes">
+    <div
+    v-for="note in notes"
+    :key="note.id"
+    class="card mb-4"
+    >
+       
+  
+  <div class="card-content">
+    <div class="content is-size-4">
+       {{note.content}} 
+
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Reviews</a>
+    <a href="#" class="card-footer-item">Trip Reports</a>
+    <a href="#" class="card-footer-item">Casino Details</a>
+  </footer>
+</div>
     </div>
 </template>
 
 <script setup>
-
+ import {ref} from 'vue'
+ const notes = ref([
+  {
+    id: 'id1',
+    content: 'Wind Creek Casino & Hotel Atmore, Alabama'
+  },
+  {
+    id: 'id2',
+    content: 'Indiana Grand Casino Anderson Indiana'
+  },
+  {
+    id: 'id3',
+    content: 'Hard Rock Hotel & Casino Sioux City.'
+  }
+ ])
 </script>
 
 <style lang="scss" scoped>
