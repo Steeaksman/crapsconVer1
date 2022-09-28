@@ -37,7 +37,7 @@
    <div class="navbar-end">
 
    <RouterLink to="/stats" class="navbar-item">  
-   Search for Casinos
+   List of Casinos
    </RouterLink>
 
    <RouterLink to="/notes" class="navbar-item">  

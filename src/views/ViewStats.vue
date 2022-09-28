@@ -1,7 +1,7 @@
 <template>
     <div class="notes">
     <div
-    v-for="note in notes"
+    v-for="note in storeNotes.notes"
     :key="note.id"
     class="card mb-4"
     >
@@ -14,9 +14,9 @@
     </div>
   </div>
   <footer class="card-footer">
-    <a href="#" class="card-footer-item">Reviews</a>
+    <!-- <a href="#" class="card-footer-item">Reviews</a> -->
     <a href="#" class="card-footer-item">Trip Reports</a>
-    <a href="#" class="card-footer-item">Casino Details</a>
+    <a href="#" class="card-footer-item">Table Reports</a>
   </footer>
 </div>
     </div>
@@ -24,20 +24,9 @@
 
 <script setup>
  import {ref} from 'vue'
- const notes = ref([
-  {
-    id: 'id1',
-    content: 'Wind Creek Casino & Hotel Atmore, Alabama'
-  },
-  {
-    id: 'id2',
-    content: 'Indiana Grand Casino Anderson Indiana'
-  },
-  {
-    id: 'id3',
-    content: 'Hard Rock Hotel & Casino Sioux City.'
-  }
- ])
+ import {useStoreNotes} from '@/stores/storeNotes'
+ const storeNotes = useStoreNotes()
+ 
 </script>
 
 <style lang="scss" scoped>
