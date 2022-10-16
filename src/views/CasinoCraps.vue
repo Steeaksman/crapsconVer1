@@ -23,9 +23,9 @@
 </template>
 
 <script setup>
- import {ref} from 'vue'
+ /* import {ref} from 'vue'
  import {useStoreNotes} from '@/stores/storeNotes'
- const storeNotes = useStoreNotes()
+ const storeNotes = useStoreNotes() */
  
 </script>
 

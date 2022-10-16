@@ -36,11 +36,15 @@
 
    <div class="navbar-end">
 
-   <RouterLink to="/stats" class="navbar-item">  
+    <RouterLink to="/" class="navbar-item">  
+   Home
+   </RouterLink>
+
+   <RouterLink to="/allcasinos" class="navbar-item">  
    List of Casinos
    </RouterLink>
 
-   <RouterLink to="/notes" class="navbar-item">  
+   <RouterLink to="/tripreports" class="navbar-item">  
    Trip Reports
    </RouterLink>
 

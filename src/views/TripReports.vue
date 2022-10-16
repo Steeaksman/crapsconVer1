@@ -1,8 +1,4 @@
 <template>
-   <div class= "is-size-2">
-   <h1>Scotts Brain</h1>
-   </div>
-
     <div class="casinos">
       
     <div
@@ -14,7 +10,6 @@
   
   <div class="card-content">
     <div class="content is-size-4">
-        
        {{casino.content}} 
     </div>
   </div>
@@ -32,19 +27,15 @@
   const casinos = ref([
    {
     id: 'id1',
-    content: 'Wisdom from the Super Gaming Brain  of Scott Spooner'
+    content: 'We were attacked by wild dogs at the entrance. Stickman was intoxicated! We won every throw and bankrupted the casino!'
   },
   {
     id: 'id2',
-    content: 'Today I would like to address the isssue of dice setting . . . if you have little kid hands dont do it!!.'
+    content: 'Doggie of woggie'
   },
   {
     id: 'id3',
-    content: 'I do not think that the live enactment of Custers Last Stand is a good marketing idea for an Indian Casino. .. Several customers were wounded after being shot by arrows! Wet T-Shirt contests are a better idea!'
-  },
-  {
-    id: 'id3',
-    content: 'Children should be permitted into Casinos to gamble..I mean its their money from their Birthday or the Tooth Fairy! Give them a chance to double it!!'
+    content: 'This is an Indian Casino with lots of craps tables. Live enactment of Custers Last Stand. Several customers were wounded after being shot by arrows!'
   }
   ])
   </script>

@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import ViewNotes from '../views/ViewNotes.vue'
-import ViewStats from '../views/ViewStats.vue'
+import CasinosAll from '../views/CasinosAll.vue'
+import CasinoCraps from '../views/CasinoCraps.vue'
 import tester from '../views/tester.vue'
 import opener from '../views/opener.vue'
+import TripReports from '../views/TripReports.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,9 +15,9 @@ const router = createRouter({
       component: opener
     },
     {
-      path: '/stats',
-      name: 'stats',
-      component: ViewStats
+      path: '/crapslist',
+      name: 'crapslist',
+      component: CasinoCraps
     },
     {
       path: '/tester',
@@ -24,9 +25,14 @@ const router = createRouter({
       component: tester
     },
     {
-      path: '/notes',
-      name: 'notes',
-      component: ViewNotes
+      path: '/allcasinos',
+      name: 'allcasinos',
+      component: CasinosAll
+    },
+    {
+      path: '/tripreports',
+      name: 'tripreports',
+      component: TripReports
     }
     
   ]
