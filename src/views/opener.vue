@@ -3,7 +3,7 @@
     <!-- this is the  v-for loop div   -->
     <div
      v-for="casino in casinos"
-    :key="doc.id"
+    :key="casino.id"
     class="card mb-4"
     > 
     
@@ -12,8 +12,11 @@
   <!-- Here i add the data that is displayed  in the card. 
   It has the class of content and is sourced from the casinos array ref -->
     <div class="content is-size-4">
-       <!-- {{docs}} 
-       {{casinos.city}}  -->
+       {{casino.casino}} 
+       {{casino.city}} 
+       {{casino.state}} 
+       {{casino.casino_type}} 
+       
     </div>
   </div>
   <footer class="card-footer">
@@ -25,32 +28,48 @@
     </div>
   </template>
   
-  <script setup>
-  import {ref} from 'vue'
 
-  import {db} from '../firebase/config'
-  import {collection,getDocs} from 'firebase/firestore'
+<script setup>
+import {ref} from 'vue'
 
-  
- 
+// import mount
+import {onMounted} from 'vue'
 
 
-  const casinos = ref([])
+//Store Stuff
+//import the store-------------------------------
+import {useCasinoList} from '../stores/CasinoStore'
 
-  const colRef = collection (db, 'casinos')
+import {db} from '../firebase/config'
+import { collection, getDocs } from 'firebase/firestore'
+
+
+//invoke and return the store-----------------------------
+const casinoStore = useCasinoList()
+
+
+
+//------------------------------------------------------
+//when page first loads this array is empty
+const casinos = ref([])
+
+const colRef = collection(db, 'casinos')
 
 getDocs(colRef)
-.then(snapshot => {
-    let casinos = []
+  .then(snapshot => {
+    let docs = []
     snapshot.docs.forEach(doc => {
-        casinos.push({ ...doc.data(), id: doc.id})
+     docs.push({ ...doc.data(), id:doc.id})   
     })
-    casinos.value = casinos
-    console.log(casinos)
+    casinos.value = docs
+  })
+
+  onMounted(() => {
+    console.log("Hotdamm!!I got this mounted hook thing down!!!");
 })
 
-  </script>
-  
-  <style lang="scss" scoped>
-  
-  </style> 
+</script>
+
+<style lang="scss" scoped>
+
+</style>
