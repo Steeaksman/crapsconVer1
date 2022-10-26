@@ -50,10 +50,21 @@ const casinoStore = useCasinoList()
 
 
 //------------------------------------------------------
-//when page first loads this array is empty
+
+//Set a ref called casinos to store the fetched data in an array. 
+//When page first loads this array is empty.It is populated after
+//data is parsed from the database with the casinos.value = docs command.
+
 const casinos = ref([])
 
+//The collection function calls the firebase database and collection used
+//when fetching the data.Save the function as a ref const called colRef.
+
 const colRef = collection(db, 'casinos')
+
+//now we can fetch documents from the collection using the colRef const.
+//We use the getDocs firebase function passing in the colRef const as guide to 
+//db name and collection name.
 
 getDocs(colRef)
   .then(snapshot => {
@@ -61,6 +72,9 @@ getDocs(colRef)
     snapshot.docs.forEach(doc => {
      docs.push({ ...doc.data(), id:doc.id})   
     })
+    //set the contents of the casinos array which was empty when 
+    //created to the contents of the  docs variable.
+
     casinos.value = docs
   })
 
