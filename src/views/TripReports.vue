@@ -2,15 +2,15 @@
     <div class="casinos">
       
     <div
-     v-for="casino in casinos"
-    :key="casino.id"
+     v-for="tripReport in tripReports"
+    :key="tripReport.id"
     class="card mb-4"
     > 
     
   
   <div class="card-content">
     <div class="content is-size-4">
-       {{casino.content}} 
+       {{tripReport.reportText}} 
     </div>
   </div>
   <footer class="card-footer">
@@ -23,21 +23,9 @@
   </template>
   
   <script setup>
-  import {ref} from 'vue'
-  const casinos = ref([
-   {
-    id: 'id1',
-    content: 'We were attacked by wild dogs at the entrance. Stickman was intoxicated! We won every throw and bankrupted the casino!'
-  },
-  {
-    id: 'id2',
-    content: 'Doggie of woggie'
-  },
-  {
-    id: 'id3',
-    content: 'This is an Indian Casino with lots of craps tables. Live enactment of Custers Last Stand. Several customers were wounded after being shot by arrows!'
-  }
-  ])
+  import getCollection from '@/composables/getCollection'
+
+const { documents: tripReports } = getCollection('tripReports')
   </script>
   
   <style lang="scss" scoped>

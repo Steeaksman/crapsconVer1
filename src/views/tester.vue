@@ -36,7 +36,7 @@
   },
   {
     id: 'id2',
-    content: 'Today I would like to address the isssue of dice setting . . . if you have greasy little kid hands dont do it!! And look out for Robert De niro. If he catches you manipulating the dice he will crush your hand with a hammer like he did to the unfortunate cheater in the movie Casino. '
+    content: 'Today I would like to address the isssue of dice setting . . . if you have greasy little kid hands dont do it!! And look out for Robert DeNiro. If he catches you manipulating the dice he will crush your hand with a hammer like he did to the unfortunate cheater in the movie Casino. '
     
   },
   {
@@ -45,7 +45,7 @@
   },
   {
     id: 'id3',
-    content: 'Children should be permitted into Casinos to gamble..I mean its their money from their Birthday or the Tooth Fairy! Give them a chance to double it!! Come on Parents . . Lighten up!!'
+    content: 'Children should be allowed into Casinos to gamble..I mean its their money from their Birthday or the Tooth Fairy! Give them a chance to double it!! Come on Parents . . Lighten up!!'
   }
   ])
   </script>
