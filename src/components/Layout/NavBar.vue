@@ -6,7 +6,7 @@
     >
    <div class="container is-max-desktop">
    <div class="navbar-brand">
-    <router-link to="/"><img src="src/assets/dcrap.jpg" width="60" height="150"/>
+    <router-link to="/"><img src="/src/assets/dcrap.jpg" width="60" height="150"/>
     Craps stuff</router-link>
    
 
@@ -46,6 +46,10 @@
 
    <RouterLink to="/tripreports" class="navbar-item">  
    Trip Reports
+   </RouterLink>
+
+   <RouterLink to="/TableReports" class="navbar-item">  
+   Table Reports
    </RouterLink>
 
    <RouterLink to="/tester" class="navbar-item">  

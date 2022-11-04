@@ -30,8 +30,9 @@ It has the class of content and is sourced from the casinos array ref -->
 
 
 <script setup>
+//import the composable
 import getCollection from '@/composables/getCollection'
-
+//Pass in the name of the collection you want to address
 const { documents: casinos } = getCollection('casinos')
 
 
