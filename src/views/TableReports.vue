@@ -1,4 +1,5 @@
 <template>
+  <div class="container is-max-desktop px-2 py-4 ">
     <div class="casinos">
       
     <div
@@ -20,6 +21,7 @@
   </footer>
   </div>
     </div>
+  </div>
   </template>
   
   <script setup>

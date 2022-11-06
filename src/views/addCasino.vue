@@ -1,6 +1,7 @@
 <template>
    <h1>addCasino</h1>
     <div>
+    <!-- Start by creating a form. -->
       <form @submit.prevent="handleSubmit">
 
   <div class="field">
@@ -52,9 +53,13 @@
 
 <script setup>
 import { ref } from 'vue';
-//firebase imports
+//We import the firebase database
 import { db } from '../firebase/config'
+//We import the addDoc method  and the collection method
 import { addDoc, collection } from 'firebase/firestore'
+
+// set const refs for each input. These mirror the document fields 
+//in the database. We use v-model to populate them from the inputs.
 
 const casino = ref('')
  const casino_type = ref('')
@@ -62,6 +67,10 @@ const city = ref('')
 const state = ref('')
 const country = ref('')
 const website = ref('')
+
+// When submit button is pressed the handleSubmit action is fired
+//this action injects the new data object into the database using the
+//addDoc firebase function
 
 const handleSubmit = async () => {
     const colRef =  collection(db, 'casinos')
@@ -75,7 +84,7 @@ const handleSubmit = async () => {
         website: website.value
     })
 
-    //reset the form
+    //Finally we reset the form by changing the value of the ref constant
         casino.value = ''
         casino_type.value = ''
         city.value = ''

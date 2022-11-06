@@ -1,4 +1,5 @@
 <template>
+  <div class="container is-max-desktop px-2 py-4 ">
   <div class="casinos">
   <!-- this is the  v-for loop div   -->
   <div
@@ -26,6 +27,7 @@ It has the class of content and is sourced from the casinos array ref -->
 </footer>
 </div>
   </div>
+</div>
 </template>
 
 

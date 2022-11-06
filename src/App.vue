@@ -9,14 +9,14 @@ inside the template tag -->
   <!-- I now setup a container div to contain the pages using
   a Bulma container class -->
  
-  <div class="container is-max-desktop px-2 py-4 ">
+  <!-- <div class="container is-max-desktop px-2 py-4 "> -->
 
     <!-- inside of this div I place the Routerview component that
     determines where our pages are displayed -->
 
     <RouterView />
 
-  </div>
+  <!-- </div> -->
   
   </template>
   

@@ -1,17 +1,17 @@
 <template>
-  <div class="container is-max-desktop px-2 py-4 has-background-white-ter ">
+  <div class="container is-max-desktop px-2 py-4 ">
     <div class="casinos">
       
     <div
-     v-for="tripReport in tripReports"
-    :key="tripReport.id"
+     v-for="brain in scottsBrain"
+    :key="scottsBrain.id"
     class="card mb-4"
     > 
     
   
   <div class="card-content">
     <div class="content is-size-4">
-       {{tripReport.reportText}} 
+       {{brain.yada}} 
     </div>
   </div>
   <footer class="card-footer">
@@ -21,13 +21,13 @@
   </footer>
   </div>
     </div>
-  </div>
+    </div>
   </template>
   
   <script setup>
   import getCollection from '@/composables/getCollection'
 
-const { documents: tripReports } = getCollection('tripReports')
+const { documents: scottsBrain } = getCollection('scottsBrain')
   </script>
   
   <style lang="scss" scoped>

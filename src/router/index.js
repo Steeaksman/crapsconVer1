@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import CasinosAll from '../views/CasinosAll.vue'
 import CasinoCraps from '../views/CasinoCraps.vue'
-import tester from '../views/tester.vue'
+import scottsBrain from '../views/scottsBrain.vue'
+import addscottsBrain from '../views/addscottsBrain.vue'
 import opener from '../views/opener.vue'
 import TripReports from '../views/TripReports.vue'
 import addCasino from '../views/addCasino.vue'
@@ -24,9 +25,9 @@ const router = createRouter({
       component: CasinoCraps
     },
     {
-      path: '/tester',
-      name: 'tester',
-      component: tester
+      path: '/scottsBrain',
+      name: 'scottsBrain',
+      component: scottsBrain
     },
     {
       path: '/allcasinos',
@@ -57,6 +58,11 @@ const router = createRouter({
       path: '/TableReports',
       name: 'TableReports',
       component: TableReports
+    },
+    {
+      path: '/addscottsBrain',
+      name: 'addscottsBrain',
+      component: addscottsBrain
     }
     
   ]

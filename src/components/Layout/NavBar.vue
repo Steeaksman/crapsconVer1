@@ -52,7 +52,7 @@
    Table Reports
    </RouterLink>
 
-   <RouterLink to="/tester" class="navbar-item">  
+   <RouterLink to="/scottsBrain" class="navbar-item">  
    Scotts Remarks
    </RouterLink>
      
